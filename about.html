@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Lloyd Brown</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar (Consistent with Home) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">LB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="organizations.html">Organizations</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌓</button>
+        </nav>
+    </header>
+
+    <!-- Main About Content -->
+    <main class="about-container">
+        <section class="about-hero">
+            <h1>About <span class="highlight">Lloyd</span></h1>
+            <p class="subtitle">Computer Scientist & Technology Innovator</p>
+        </section>
+
+        <!-- Bio Sections with Toggle -->
+        <div class="bio-toggle">
+            <button class="bio-btn active" data-bio="professional">Professional</button>
+            <button class="bio-btn" data-bio="personal">Personal</button>
+        </div>
+
+        <section class="bio-section professional-bio" id="professionalBio">
+            <div class="bio-content">
+                <h2>Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>PhD in Computer Science</h3>
+                        <p class="timeline-date">2020 - Present</p>
+                        <p class="timeline-location">Stanford University</p>
+                        <p>Research focus: Machine Learning Optimization</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Senior Software Engineer</h3>
+                        <p class="timeline-date">2018 - 2020</p>
+                        <p class="timeline-location">Google AI</p>
+                        <p>Developed neural network compression techniques</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-chart">
+                <h3>Technical Skills</h3>
+                <div class="skill-meter">
+                    <div class="skill" data-skill="Machine Learning" data-level="95"></div>
+                    <div class="skill" data-skill="Python" data-level="90"></div>
+                    <div class="skill" data-skill="JavaScript" data-level="85"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bio-section personal-bio hidden" id="personalBio">
+            <div class="personal-content">
+                <h2>Beyond Code</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <h3>Open Source</h3>
+                        <p>Active contributor to TensorFlow and React</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Mentorship</h3>
+                        <p>Lead coding bootcamps for underrepresented groups</p>
+                    </div>
+                </div>
+                <blockquote>
+                    "Technology should empower, not exclude."
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Lloyd Brown. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* ===== Community Page Specific Styles ===== */
+.community-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 5% 50px;
+}
+
+.community-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Discussion Forum Styles */
+.discussion-forum {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.topic-form {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-bg);
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.discussion-threads {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.thread-card {
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.thread-card:hover {
+    transform: translateY(-3px);
+}
+
+.thread-header {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.thread-category {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.thread-category.ai {
+    background: rgba(255, 105, 180, 0.2);
+    color: #ff69b4;
+}
+
+.thread-category.webdev {
+    background: rgba(100, 200, 255, 0.2);
+    color: #64c8ff;
+}
+
+.thread-author {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    display: block;
+}
+
+.thread-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.thread-stats i {
+    margin-right: 0.3rem;
+}
+
+/* Coding Challenges */
+.coding-challenges {
+    margin-bottom: 3rem;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.challenge-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+}
+
+.challenge-difficulty {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.challenge-difficulty.intermediate {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+.challenge-difficulty.advanced {
+    background: rgba(255, 69, 0, 0.2);
+    color: #ff4500;
+}
+
+.challenge-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.challenge-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.challenge-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.challenge-meta span {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* Live Code Sharing */
+.code-sharing {
+    margin-bottom: 3rem;
+}
+
+.code-editor {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.editor-header {
+    background: #252526;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+#liveCodeBlock {
+    color: #d4d4d4;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+}
+
+.editor-footer {
+    background: #252526;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .forum-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .editor-header, .editor-footer {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | Lloyd Brown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="community.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">LB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="organizations.html">Organizations</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌓</button>
+        </nav>
+    </header>
+
+    <!-- Community Main Content -->
+    <main class="community-container">
+        <section class="community-header">
+            <h1>Tech <span class="highlight">Community</span></h1>
+            <p>Sharing knowledge and collaborating with developers worldwide</p>
+        </section>
+
+        <!-- Discussion Forum -->
+        <section class="discussion-forum">
+            <div class="forum-header">
+                <h2>Discussion Board</h2>
+                <button class="btn-primary" id="newTopicBtn"><i class="fas fa-plus"></i> New Topic</button>
+            </div>
+            
+            <!-- Topic Creation Form (Hidden by Default) -->
+            <div class="topic-form hidden" id="topicForm">
+                <h3>Start a Discussion</h3>
+                <form id="discussionForm">
+                    <div class="form-group">
+                        <label for="topicTitle">Title</label>
+                        <input type="text" id="topicTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topicCategory">Category</label>
+                        <select id="topicCategory">
+                            <option value="general">General Discussion</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="webdev">Web Development</option>
+                            <option value="algorithms">Algorithms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="topicContent">Content</label>
+                        <textarea id="topicContent" rows="5" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Post</button>
+                        <button type="button" class="btn-secondary" id="cancelTopic">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Discussion Threads -->
+            <div class="discussion-threads" id="discussionThreads">
+                <!-- Sample Thread 1 -->
+                <div class="thread-card">
+                    <div class="thread-header">
+                        <span class="thread-category ai">AI</span>
+                        <h3>Optimizing Transformer Models for Edge Devices</h3>
+                        <span class="thread-author">Posted by Lloyd • 2 days ago</span>
+                    </div>
+                    <div class="thread-content">
+                        <p>Exploring techniques to reduce model size while maintaining accuracy for mobile deployment...</p>
+                    </div>
+                    <div class="thread-stats">
+                        <span><i class="fas fa-comment"></i> 14 replies</span>
+                        <span><i class="fas fa-eye"></i> 238 views</span>
+                    </div>
+                </div>
+
+                <!-- Sample Thread 2 -->
+                <div class="thread-card">
+                    <div class="thread-header">
+                        <span class="thread-category webdev">Web</span>
+                        <h3>React vs Svelte Performance Comparison</h3>
+                        <span class="thread-author">Posted by Sarah • 1 week ago</span>
+                    </div>
+                    <div class="thread-content">
+                        <p>Benchmark results and analysis of modern frontend frameworks in resource-constrained environments...</p>
+                    </div>
+                    <div class="thread-stats">
+                        <span><i class="fas fa-comment"></i> 27 replies</span>
+                        <span><i class="fas fa-eye"></i> 512 views</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Challenges -->
+        <section class="coding-challenges">
+            <h2>Monthly Coding Challenges</h2>
+            <div class="challenges-grid">
+                <!-- Challenge 1 -->
+                <div class="challenge-card">
+                    <div class="challenge-difficulty intermediate">Intermediate</div>
+                    <h3>Distributed Key-Value Store</h3>
+                    <p>Implement a simple but scalable distributed storage system</p>
+                    <div class="challenge-meta">
+                        <span>15 submissions</span>
+                        <button class="btn-secondary">View Challenge</button>
+                    </div>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="challenge-card">
+                    <div class="challenge-difficulty advanced">Advanced</div>
+                    <h3>Neural Network Pruning</h3>
+                    <p>Reduce model size while maintaining >95% accuracy</p>
+                    <div class="challenge-meta">
+                        <span>8 submissions</span>
+                        <button class="btn-secondary">View Challenge</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Code Sharing -->
+        <section class="code-sharing">
+            <h2>Live Code Collaboration</h2>
+            <div class="code-editor">
+                <div class="editor-header">
+                    <span>JavaScript • Real-time</span>
+                    <button class="btn-primary" id="joinSessionBtn"><i class="fas fa-user-plus"></i> Join Session</button>
+                </div>
+                <pre><code id="liveCodeBlock">// Welcome to the collaborative editor
+// Start typing here to participate
+
+function fibonacci(n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+</code></pre>
+                <div class="editor-footer">
+                    <span>5 developers online</span>
+                    <div class="editor-actions">
+                        <button class="btn-secondary"><i class="fas fa-copy"></i> Copy</button>
+                        <button class="btn-secondary"><i class="fas fa-save"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Lloyd Brown. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="community.js"></script>
+</body>
+</html>
