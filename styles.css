@@ -1,0 +1,221 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary-bg: #0a192f;
+    --secondary-bg: #172a45;
+    --text-primary: #e6f1ff;
+    --text-secondary: #8892b0;
+    --accent: #64ffda;
+    --card-bg: #112240;
+    --light-shadow: rgba(2, 12, 27, 0.7);
+}
+
+/* Light Mode Variables (Toggleable via JS) */
+[data-theme="light"] {
+    --primary-bg: #f8f9fa;
+    --secondary-bg: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #495057;
+    --accent: #0077b6;
+    --card-bg: #ffffff;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background 0.3s ease;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3 {
+    font-family: 'Fira Code', monospace;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+/* ===== Navigation ===== */
+.header {
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-bg);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: var(--accent);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    padding-top: 80px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--primary-bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.btn-secondary {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* ===== Skills Section ===== */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 5%;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px var(--light-shadow);
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-bg);
+    color: var(--text-secondary);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--accent);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
